@@ -1,0 +1,40 @@
+جدول مقاسات الخطوط (Font Size) في Bootstrap 5
+
+ملاحظة: Bootstrap بيعتمد على 1rem = 16px
+
+Class / Element	الحجم بالـ rem	الحجم بالـ px
+display-1		80px
+display-2		72px
+display-3		64px
+display-4		56px
+display-5		48px
+display-6		40px
+h1 / .fs-1		40px
+h2 / .fs-2		32px
+h3 / .fs-3		28px
+h4 / .fs-4		24px
+h5 / .fs-5		20px
+h6 / .fs-6		16px
+Text default	1rem	16px
+Small text	0.875rem	14px
+⚖️ جدول وزن الخط (Font Weight) في Bootstrap 5
+Class	Font Weight (رقمي)
+fw-lighter	200
+fw-light	300
+fw-normal	400
+fw-medium	500
+fw-semibold	600
+fw-bold	    700
+fw-bolder	800
+------------spacing-----------------
+جدول Spacing Scale في Bootstrap 5
+
+Bootstrap بيعتمد على: 1rem = 16px
+
+Scale	القيمة بالـ rem	القيمة بالـ px
+
+1		4px
+2		8px
+3		16px
+4		24px
+5		48px

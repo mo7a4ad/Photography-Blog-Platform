@@ -1,0 +1,355 @@
+body #root {
+  font-family: "Tajawal", sans-serif;
+  --dark-orange: rgb(255, 105, 0);
+  --light-orange: rgb(250, 172, 32);
+  
+}
+/*hover in navBar component*/
+.NavBarLogo {
+  transition: all 0.3s;
+}
+.NavBarLogo:hover {
+  transform: scale(1.1);
+}
+.main-part {
+  transition: all 0.3s;
+}
+.main-part:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav-search-btn:hover {
+  color: rgb(247, 111, 21) !important;
+  cursor: pointer;
+  border-color: gray;
+}
+.nav-btn-read-more {
+  transition: all 0.3s;
+}
+/*honer on any button has arrow icon*/
+button:not(.know-more-btn) {
+  transition: all 0.3s;
+}
+button:not(.know-more-btn):hover {
+  transform: translateY(-3px);
+}
+button .icon {
+  transition: all 0.3s;
+}
+button:not(.know-more-btn):hover .icon {
+  transform: translatex(-3px);
+}
+/*hover on home component*/
+.know-more-btn {
+  transition: all 0.3s;
+}
+.know-more-btn:hover {
+  color: var(--dark-orange) !important;
+  border-color: var(--dark-orange) !important;
+  background-color: rgba(var(--dark-orange)) !important;
+}
+.head-section .main-items .item {
+  transition: all 0.3s;
+}
+.head-section .main-items .item:hover {
+  transform: scale(1.05);
+}
+
+/*animation in home component*/
+.glow-dot {
+  animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 105, 0, 0.7);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 4px 1px rgba(255, 105, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 105, 0, 0.7);
+    transform: scale(1);
+  }
+}
+.lighting-dot {
+  animation: light 1.5s infinite ease;
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+/*section articles choosen*/
+.article .badge {
+  background-image: linear-gradient(90deg, rgb(255, 116, 0), rgb(241, 175, 0));
+}
+.article .badge {
+  top: 15px;
+  right: 5px;
+}
+.foot .ball {
+  left: 0px;
+  bottom: 0px;
+  border: 2px solid black;
+}
+.foot .read-more {
+  transition: all 0.3s;
+}
+.article {
+  cursor: pointer;
+}
+.article .start-part img {
+  transition: all 0.7s;
+}
+.article:hover .start-part img {
+  transform: scale(1.1);
+}
+.article .end-part .title {
+  transition: all 0.3s;
+}
+.article:hover .end-part .title {
+  color: var(--dark-orange) !important;
+}
+.article .row  {
+  border: 1px solid white;
+  border-right: 0;
+  transition: all 0.3s;
+}
+.article:hover .row  {
+  border-color: var(--dark-orange) !important;
+}
+.article:hover .end-part .foot .read-more {
+  transform: translateX(3px);
+}
+/*==========discover-section=================*/
+.discover-section .item-arrow {
+  top: 24px;
+  left: 24px;
+}
+/*effects when hovering on item in discover section*/
+
+.discover-section .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgb(255, 108, 0), rgb(241, 174, 0));
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+}
+.discover-section .item:hover::before {
+  opacity: 1;
+}
+.discover-section .item > * {
+  position: relative;
+  z-index: 1;
+}
+.discover-section .item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  border: 1px solid transparent !important;
+}
+.discover-section .item:hover .item-logo {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-color: transparent !important;
+  color: white;
+}
+.discover-section .item:hover .count {
+  color: white !important;
+}
+.discover-section .item-arrow {
+  background-color: rgb(255, 255, 255, 0.2);
+  opacity: 0;
+  z-index: 0;
+}
+.discover-section .item:hover .item-arrow {
+  opacity: 1;
+}
+/* ============ end discover section */
+/*============latest articles section=============*/
+.latest-articles-section .show-all-articles:hover {
+  color: var(--light-orange);
+  cursor: pointer;
+}
+.latest-articles-section .show-all-articles:hover .icon {
+  transform: translateX(-5px);
+}
+.latest-articles-section .items .badg {
+  top: 15px;
+  right: 15px;
+}
+.latest-articles-section .shadow-effect {
+  bottom: 0;
+  opacity: 0;
+  background-image: linear-gradient(transparent, rgb(0, 0, 0, 0.5) 90%);
+  transition: all 0.5s;
+}
+.latest-articles-section .item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.latest-articles-section .item:hover .top-of-latest-article {
+  border: 1px solid black;
+}
+.latest-articles-section .item:hover .shadow-effect {
+  opacity: 1;
+}
+.latest-articles-section .item:hover .top-of-latest-article img {
+  transform: scale(1.1);
+}
+.latest-articles-section .item:hover .bottom .title {
+  color: var(--dark-orange);
+}
+.latest-articles-section .item:hover .footer .item-arrow {
+  background-color: var(--dark-orange);
+  color: white;
+}
+/*=========== end latest articles section=========*/
+/*===========subscripe-section===============*/
+ input {
+  outline:none;
+}
+ input:focus {
+  
+  box-shadow: 0 0 2px 1px var(--light-orange);
+}
+.subscripe-section .footer .images .middle-image {
+  margin-right: -10px;
+  border: 1px solid black;
+}
+/*===========end subscripe-section===============*/
+/*===========blog-part===============*/
+.search-input label{
+left: 10px;
+}
+.delete-filter:hover{
+  color: var(--dark-orange) !important;
+  cursor: pointer;
+}
+/*===========end blog-part===============*/
+/*============who us part================*/
+/*section our values*/
+
+.who-us .our-values .item:hover{
+  border-color: var(--dark-orange) !important;
+  background-image:linear-gradient(135deg,rgb(46, 31, 20),rgb(44, 37, 20)) ;
+
+}
+.who-us .our-values .item:hover .title{
+  color: var(--dark-orange);
+
+}
+/*section our team*/
+.who-us .our-team .item:hover{
+border-color: rgb(93, 47, 15) !important;
+}
+.who-us .our-team .item:hover img{
+border-color: rgb(93, 47, 15) !important;
+}
+.linked-in:hover{
+background-color: rgb(21, 93, 252);
+color: white !important;
+}
+.git-hup:hover{
+background-color: rgb(64, 64, 64);
+color: white !important;
+}
+.x:hover{
+background-color: rgb(255, 105, 0);
+color: white !important;
+}
+/*section any questions*/
+.who-us .any-questions{
+  background-image: linear-gradient(170deg,rgb(246, 75, 0)40%,rgb(241, 174, 1));
+}
+/*==========end who us part==============*/
+/*==============fooooter part=============*/
+.footer .icons  .icon:hover{
+transform: scale(1.1) !important;
+color: white !important;
+background-color: var(--dark-orange);
+}
+.line{
+  background-image: linear-gradient(90deg , rgb(255, 111, 0),rgb(241, 175, 0));
+}
+li span{
+ color: transparent;
+ transition: all .3s;
+}
+li{
+  transform: translateX(15px);
+  transition: all .3s;
+}
+li:hover{
+  transform: translateX(-10px);
+  color: #ff6c00 ;
+}
+li:hover span{
+ 
+  color: #ff6c00 ;
+}
+
+
+/*===========end fooooter part============*/
+/*about responsive*/
+@media (min-width: 0px) and (max-width: 960px) {
+  .border-none {
+    border: 0 transparent !important;
+  }
+  .w-md-100 {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .w-sm-100 {
+    width: 100% !important;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .p-lg-64 {
+    padding: 64px !important;
+  }
+}
+@media (max-width: 990px) {
+ .my-d-none{
+    display: none !important;
+  }
+  .my-d-block{
+    display: block !important;
+  }
+}
+/*===========================================*/
+.filter-item {
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: 0.3s !important;
+}
+.filter-item:hover {
+  border-color: #ff6c00 !important;
+}
+
+.filter-item.active {
+  background-color: #ff6c00 !important;
+  color: white !important;
+  border-color:  transparent !important;
+}
+.bomb.active{
+  background-image: linear-gradient(90deg ,rgb(255, 105, 0), rgb(246, 76, 0));
+  color: white !important;
+}
