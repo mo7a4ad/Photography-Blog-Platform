@@ -11,7 +11,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <div className="footer bg-black">
+      <div className="footer  border-top border-secondary">
         <div className="container">
           <div className="py-64">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">

@@ -26,7 +26,7 @@ body #root {
 .nav-btn-read-more {
   transition: all 0.3s;
 }
-/*honer on any button has arrow icon*/
+/*hover on any button has arrow icon*/
 button:not(.know-more-btn) {
   transition: all 0.3s;
 }
@@ -93,7 +93,14 @@ button:not(.know-more-btn):hover .icon {
     opacity: 0.5;
   }
 }
+/*head-section*/
+.head-section{
+  background-image: radial-gradient(rgb(33, 18, 9),rgb(10, 10, 10));
+}
 /*section articles choosen*/
+.choosen-articles-section{
+  background-image: linear-gradient(90deg,rgb(10, 10, 10) 80%,rgb(22, 15, 10));
+}
 .article .badge {
   background-image: linear-gradient(90deg, rgb(255, 116, 0), rgb(241, 175, 0));
 }
@@ -136,6 +143,9 @@ button:not(.know-more-btn):hover .icon {
   transform: translateX(3px);
 }
 /*==========discover-section=================*/
+.discover-section{
+  background-color: rgb(17, 17, 17);
+}
 .discover-section .item-arrow {
   top: 24px;
   left: 24px;
@@ -181,6 +191,9 @@ button:not(.know-more-btn):hover .icon {
 }
 /* ============ end discover section */
 /*============latest articles section=============*/
+.latest-articles-section{
+  background-image: linear-gradient(90deg,rgb(22, 15, 10), rgb(10, 10, 10) 20%);
+}
 .latest-articles-section .show-all-articles:hover {
   color: var(--light-orange);
   cursor: pointer;
@@ -202,9 +215,9 @@ button:not(.know-more-btn):hover .icon {
   transform: translateY(-5px);
   cursor: pointer;
 }
-.latest-articles-section .item:hover .top-of-latest-article {
-  border: 1px solid black;
-}
+/* .latest-articles-section .item:hover .top-of-latest-article {
+  border: 1px solid gray;
+} */
 .latest-articles-section .item:hover .shadow-effect {
   opacity: 1;
 }
@@ -220,11 +233,16 @@ button:not(.know-more-btn):hover .icon {
 }
 /*=========== end latest articles section=========*/
 /*===========subscripe-section===============*/
+.subscripe-section{
+  background-image: linear-gradient(90deg, rgb(10, 10, 10)25%,rgb(32, 18, 9),rgb(10, 10, 10)75%);
+}
+
  input {
   outline:none;
+  
 }
  input:focus {
-  
+  border: 1px solid transparent;
   box-shadow: 0 0 2px 1px var(--light-orange);
 }
 .subscripe-section .footer .images .middle-image {
@@ -233,6 +251,10 @@ button:not(.know-more-btn):hover .icon {
 }
 /*===========end subscripe-section===============*/
 /*===========blog-part===============*/
+/*head-blog-section*/
+.head-blog-section{
+  background-image: radial-gradient(rgb(33, 18, 9),rgb(10, 10, 10)70%);
+}
 .search-input label{
 left: 10px;
 }
@@ -240,10 +262,17 @@ left: 10px;
   color: var(--dark-orange) !important;
   cursor: pointer;
 }
+/*display shape*/
+.shape.active{
+  background-color: var(--dark-orange);
+  color: white !important;
+}
 /*===========end blog-part===============*/
 /*============who us part================*/
 /*section our values*/
-
+.who-us .our-values{
+  background-image: linear-gradient(90deg,rgb(22, 15, 10),rgb(10, 10, 10) ,rgb(22, 15, 10));
+}
 .who-us .our-values .item:hover{
   border-color: var(--dark-orange) !important;
   background-image:linear-gradient(135deg,rgb(46, 31, 20),rgb(44, 37, 20)) ;
@@ -278,6 +307,9 @@ color: white !important;
 }
 /*==========end who us part==============*/
 /*==============fooooter part=============*/
+.footer{
+  background-image: linear-gradient(90deg,rgb(10, 10, 10)20%,rgb(22, 15, 10)40%,rgb(21, 19, 10)65%,rgb(10, 10, 10)80%);
+}
 .footer .icons  .icon:hover{
 transform: scale(1.1) !important;
 color: white !important;

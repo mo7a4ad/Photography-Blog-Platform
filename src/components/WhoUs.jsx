@@ -100,7 +100,7 @@ export default function WhoUs({ json }) {
           </div>
         </div>
       </section>
-      <section className="our-values  bg-dark py-80 text-white">
+      <section className="our-values   py-80 text-white">
         <div className="container">
           <div className="head mb-64 ">
             <div className="title d-flex gap-3 justify-content-center align-items-center mb-3">

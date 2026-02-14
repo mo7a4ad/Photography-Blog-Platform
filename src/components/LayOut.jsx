@@ -1,14 +1,16 @@
-import React from 'react'
-import NavBar from './NavBar';
-import Footer from './Footer';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import ScrollToTop from "../ScrollToTop";
 
 export default function LayOut() {
   return (
-      <div>
-          <NavBar />
-          <Outlet/>
-          <Footer/>
+    <div>
+      <ScrollToTop />
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }

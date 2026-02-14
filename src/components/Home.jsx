@@ -42,7 +42,6 @@ export default function Home({ json }) {
   ];
   return (
     <main>
-      
       <section className="head-section bg-black text-white py-80 mt-5 ">
         <div className="container d-flex justify-content-center">
           <div className="w-672 ">
@@ -59,24 +58,28 @@ export default function Home({ json }) {
               انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.
             </div>
             <div className="buttons d-block d-md-flex justify-content-center align-items-center gap-3 mb-64">
-              <button className="btn text-white bg-LG-Btn d-flex align-items-center justify-content-center gap-2 fs-6 fw-semibold rounded-pill py-3 px-32 w-sm-100 mb-3 mb-md-0">
-                استكشف المقالات
-                <span className="icon">
-                  <FontAwesomeIcon icon={faArrowLeft} />
-                </span>
-              </button>
-              <button className="know-more-btn btn text-white  d-flex align-items-center justify-content-center gap-2 fs-6 fw-semibold border border-secondary rounded-pill py-3 px-32 w-sm-100 ">
-                <span className="icon">
-                  <FontAwesomeIcon icon={faCircleInfo} />
-                </span>
-                اعرف المزيد
-              </button>
+              <Link to={"/blog"} className=" text-decoration-none">
+                <button className="btn text-white bg-LG-Btn d-flex align-items-center justify-content-center gap-2 fs-6 fw-semibold rounded-pill py-3 px-32 w-sm-100 mb-3 mb-md-0">
+                  استكشف المقالات
+                  <span className="icon">
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                  </span>
+                </button>
+              </Link>
+              <Link to={"/whoUs"} className=" text-decoration-none">
+                <button className="know-more-btn btn text-white  d-flex align-items-center justify-content-center gap-2 fs-6 fw-semibold border border-secondary rounded-pill py-3 px-32 w-sm-100 ">
+                  <span className="icon">
+                    <FontAwesomeIcon icon={faCircleInfo} />
+                  </span>
+                  اعرف المزيد
+                </button>
+              </Link>
             </div>
 
             <div className="main-items row row-cols-2 row-cols-lg-4 g-3">
               {arrayOfAboutSite.map((p) => (
                 <div className="col">
-                  <div className="item bg-dark  border border-secondary rounded-5 p-3 text-center">
+                  <div className="item   border border-secondary rounded-5 p-3 text-center">
                     <div className="icon  text-dark-orange fs-3 lh-1">
                       {p.icon}
                     </div>
@@ -91,7 +94,7 @@ export default function Home({ json }) {
           </div>
         </div>
       </section>
-      <section className="choosen-articles-section bg-dark py-80">
+      <section className="choosen-articles-section  py-80">
         <div className="container">
           <div className="head d-block d-md-flex justify-content-between mb-5">
             <div>
@@ -107,20 +110,22 @@ export default function Home({ json }) {
                 محتوى منتقى لبدء رحلة تعلمك
               </div>
             </div>
-            <button className="btn text-white bg-LG-Btn d-flex align-items-center align-self-end  gap-2 fs-6 fw-normal rounded-4 py-10 px-20 mt-3 mt-md-0">
-              <div> عرض الكل</div>
-              <div className="icon ">
-                <FontAwesomeIcon icon={faAngleLeft} />
-              </div>
-            </button>
+            <Link to={"/blog"} className=" text-decoration-none">
+              <button className="btn text-white bg-LG-Btn d-flex align-items-center align-self-end  gap-2 fs-6 fw-normal rounded-4 py-10 px-20 mt-3 mt-md-0">
+                <div> عرض الكل</div>
+                <div className="icon ">
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </div>
+              </button>
+            </Link>
           </div>
           <div className="some-articles">
             {json.posts.map((x) =>
               x.featured == true ? (
-                <div className="article position-relative mb-3 mx-2 mx-sm-0">
+                <div className="article position-relative mb-4 mx-2 mx-sm-0">
                   <div className=" badge text-white py-6 px-12 rounded-pill  d-inline position-absolute  lh-sm z-3">
                     <span className="fs-10 me-1">
-                      <FontAwesomeIcon icon={faStar} />{" "}
+                      <FontAwesomeIcon icon={faStar} />
                     </span>
                     <span className="fs-12 fw-semibold ">مميز</span>
                   </div>
@@ -180,7 +185,7 @@ export default function Home({ json }) {
           </div>
         </div>
       </section>
-      <section className="discover-section bg-black py-80 text-white">
+      <section className="discover-section  py-80 text-white">
         <div className="container">
           <div className="head text-center mb-5 ">
             <div className="py-2 px-3 border border-orange rounded-pill d-flex align-items-center gap-2 mb-3 w-fit bg-light-orange mx-auto">
@@ -225,7 +230,7 @@ export default function Home({ json }) {
           </div>
         </div>
       </section>
-      <section className="latest-articles-section bg-dark py-80 text-white">
+      <section className="latest-articles-section  py-80 text-white">
         <div className="container">
           <div className="head mb-5">
             <div className="py-2 px-3 border border-orange rounded-pill d-flex align-items-center gap-2 mb-3 bg-light-orange w-fit ">
@@ -234,16 +239,18 @@ export default function Home({ json }) {
               <span className="fs-14 text-dark-orange"> الأحدث</span>
             </div>
             <div className="title fs-60 fw-semibold">أحدث المقالات</div>
-            <div className="d-md-flex justify-content-between  text-dark-orange">
+            <div className="d-md-flex justify-content-between  ">
               <div className="decs text-secondary fs-18 ">
                 محتوى جديد طازج من المطبعة
               </div>
-              <div className="show-all-articles d-flex align-items-center gap-2 fw-semibold mt-2 mt-md-0 ts-2">
-                عرض جميع المقالات
-                <span className="icon lh-1 ts-2">
-                  <FontAwesomeIcon icon={faArrowLeft} />
-                </span>
-              </div>
+              <Link to={"/blog"} className="text-decoration-none show-all-articles d-flex align-items-center gap-2 fw-semibold mt-2 mt-md-0 ts-2 text-dark-orange">
+                
+                  عرض جميع المقالات
+                  <span className="icon lh-1 ts-2">
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                  </span>
+                
+              </Link>
             </div>
           </div>
           <div className="items row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
@@ -254,7 +261,7 @@ export default function Home({ json }) {
                     <div className="badg rounded-pill bg-black py-1 px-12 position-absolute fs-12 fw-semibold z-3">
                       {s.category}
                     </div>
-                    <div className="top-of-latest-article overflow-hidden rounded-4 rounded-bottom-0 border-bottom-0 ">
+                    <div className="top-of-latest-article overflow-hidden rounded-4 rounded-bottom-0 border-bottom-0 ts-3">
                       <div className="image w-100 h-100 position-relative">
                         <img className="w-100 ts-5" src={s.image} alt="" />
                         <div className="shadow-effect  h-100 w-100 position-absolute "></div>
@@ -309,7 +316,7 @@ export default function Home({ json }) {
           </div>
         </div>
       </section>
-      <section className="subscripe-section bg-black py-80 text-white d-flex justify-content-around">
+      <section className="subscripe-section  py-80 text-white d-flex justify-content-around">
         <div className="bg-light-black p-32 p-md-5 p-lg-64 rounded-4 ">
           <div className="icon w-h-64 rounded-4 bg-LG-Btn d-flex justify-content-center align-items-center fs-3 mx-auto mb-4">
             <FontAwesomeIcon icon={faEnvelope} />
@@ -356,7 +363,8 @@ export default function Home({ json }) {
               />
             </div>
             <div>
-              انضم لـ <span className="text-white fw-medium">+10,000 </span> مصور
+              انضم لـ <span className="text-white fw-medium">+10,000 </span>{" "}
+              مصور
             </div>
             <div>بدون إزعاج</div>
             <div>إلغاء الاشتراك في أي وقت</div>
