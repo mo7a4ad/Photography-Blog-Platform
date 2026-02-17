@@ -253,7 +253,7 @@ button:not(.know-more-btn):hover .icon {
 /*===========blog-part===============*/
 /*head-blog-section*/
 .head-blog-section{
-  background-image: radial-gradient(rgb(33, 18, 9),rgb(10, 10, 10)70%);
+  background-image: radial-gradient(rgb(33, 18, 9),rgb(10, 10, 10)70%) !important;
 }
 .search-input label{
 left: 10px;
@@ -303,12 +303,12 @@ color: white !important;
 }
 /*section any questions*/
 .who-us .any-questions{
-  background-image: linear-gradient(170deg,rgb(246, 75, 0)40%,rgb(241, 174, 1));
+  background-image: linear-gradient(170deg,rgb(246, 75, 0)40%,rgb(241, 174, 1)) !important;
 }
 /*==========end who us part==============*/
 /*==============fooooter part=============*/
 .footer{
-  background-image: linear-gradient(90deg,rgb(10, 10, 10)20%,rgb(22, 15, 10)40%,rgb(21, 19, 10)65%,rgb(10, 10, 10)80%);
+  background-image: linear-gradient(90deg,rgb(10, 10, 10)20%,rgb(22, 15, 10)40%,rgb(21, 19, 10)65%,rgb(10, 10, 10)80%) !important;
 }
 .footer .icons  .icon:hover{
 transform: scale(1.1) !important;
