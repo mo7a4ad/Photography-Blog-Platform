@@ -2,7 +2,6 @@ import {
   faClock,
   faFaceFrown,
   faNewspaper,
-  
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faAngleLeft,
@@ -14,7 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 export default function Blog({ json }) {
   const articles = json.posts;
@@ -96,11 +94,11 @@ export default function Blog({ json }) {
                 إضاءة
               </button>
               <button
-                onClick={() => {
+                onClick={() => 
                   setTypeOfArticles(
                     articles.filter((item) => item.category === "بورتريه"),
-                  );
-                }}
+                  )
+                }
                 className={`py-2 px-3 rounded-4 border text-secondary border-secondary fs-14 fw-bold bg-light-black cursor-pointer filter-item ${
                   typeOfArticles.every((item) => item.category === "بورتريه")
                     ? "active"
@@ -228,7 +226,7 @@ export default function Blog({ json }) {
                         <div className="desc fs-14 text-secondary pb-20 border-bottom border-secondary">
                           {f.excerpt}
                         </div>
-                        <div className="footer mt-3">
+                        <div className="foot mt-3">
                           <div className="d-flex justify-content-between align-items-center">
                             <div className="d-flex  align-items-center gap-2">
                               <div className="image w-h-36 ">

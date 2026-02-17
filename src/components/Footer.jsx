@@ -7,6 +7,7 @@ import {
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons/faAngleLeft";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -54,27 +55,41 @@ export default function Footer() {
                   <div className="line w-32-h-2  rounded-pill"></div> استكشف
                 </div>
                 <ul className=" d-flex flex-column gap-3 text-secondary list-unstyled fs-14">
-                  <li className="d-flex align-items-center gap-2 ">
-                    {" "}
-                    <span className="">
-                      <FontAwesomeIcon icon={faAngleLeft} />
-                    </span>
-                    الرئيسة
-                  </li>
-                  <li className="d-flex align-items-center gap-2 ">
-                    {" "}
-                    <span className="">
-                      <FontAwesomeIcon icon={faAngleLeft} />
-                    </span>
-                    المدونه
-                  </li>
-                  <li className="d-flex align-items-center gap-2 ">
-                    {" "}
-                    <span className="">
-                      <FontAwesomeIcon icon={faAngleLeft} />
-                    </span>
-                    من نحن
-                  </li>
+                  <Link
+                    to={"/"}
+                    className=" text-decoration-none text-secondary"
+                  >
+                    <li className="d-flex align-items-center gap-2 ">
+                      <span className="">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                      </span>
+                      الرئيسة
+                    </li>
+                  </Link>
+                  <Link
+                    to={"/blog"}
+                    className=" text-decoration-none text-secondary "
+                  >
+                    <li className="d-flex align-items-center gap-2 ">
+                      {" "}
+                      <span className="">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                      </span>
+                      المدونه
+                    </li>
+                  </Link>
+                  <Link
+                    to={"/whoUs"}
+                    className=" text-decoration-none text-secondary"
+                  >
+                    <li className="d-flex align-items-center gap-2 ">
+                      {" "}
+                      <span className="">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                      </span>
+                      من نحن
+                    </li>
+                  </Link>
                 </ul>
               </div>
               <div className="col">
@@ -94,7 +109,7 @@ export default function Footer() {
                     <span className="">
                       <FontAwesomeIcon icon={faAngleLeft} />
                     </span>
-                    بورتريع
+                    بورتريه
                   </li>
                   <li className="d-flex align-items-center gap-2 ">
                     {" "}
@@ -120,9 +135,15 @@ export default function Footer() {
                 <div className="fs-14 text-secondary mb-3">
                   اشترك للحصول على أحدث المقالات والتحديثات.
                 </div>
-                <form >
-                  <input className="w-100 py-12 px-3 rounded-4 text-start bg-light-black border-0 text-white mb-12"  type="email" placeholder="ادخل بريدك الالكترونى" />
-                  <button className="py-3 px-32 rounded-pill bg-dark-orange text-center w-100  border-0">اشترك</button>
+                <form>
+                  <input
+                    className="w-100 py-12 px-3 rounded-4 text-start bg-light-black border-0 text-white mb-12"
+                    type="email"
+                    placeholder="ادخل بريدك الالكترونى"
+                  />
+                  <button className="py-3 px-32 rounded-pill bg-dark-orange text-center w-100  border-0">
+                    اشترك
+                  </button>
                 </form>
               </div>
             </div>

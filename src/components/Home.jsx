@@ -42,7 +42,7 @@ export default function Home({ json }) {
   ];
   return (
     <main>
-      <section className="head-section bg-black text-white py-80 mt-5 ">
+      <section className="head-section  text-white py-80 mt-5 ">
         <div className="container d-flex justify-content-center">
           <div className="w-672 ">
             <div className="py-2 px-3 border border-orange rounded-pill d-flex align-items-center gap-2 mb-32 w-fit mx-auto bg-light-orange">

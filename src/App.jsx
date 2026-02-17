@@ -7,7 +7,6 @@ import WhoUs from "./components/WhoUs";
 import LayOut from "./components/LayOut";
 import Error from "./components/Error";
 
-
 function App() {
   const routs = createBrowserRouter([
     {
@@ -15,15 +14,15 @@ function App() {
       element: <LayOut />,
       children: [
         { index: true, element: <Home json={data} /> },
+        { path: "home", element: <Home json={data} /> },
         { path: "blog", element: <Blog json={data} /> },
         { path: "whoUs", element: <WhoUs json={data} /> },
       ],
     },
-    {path: "*" , element: <Error/>}
+    { path: "*", element: <Error /> },
   ]);
   return (
     <>
-      
       <RouterProvider router={routs} />
     </>
   );
